@@ -1,0 +1,59 @@
+
+
+---------- API to get balance --------------
+
+http://127.0.0.1:8008/api/v1/address/new
+
+POST method
+
+params 
+{
+  "coin" : "btc",
+  "coin_type" : "COIN",
+  "environment" : "TEST_NET"
+}
+
+response 
+{
+    "HTTP_STATUS_CODE":200,
+    "status":true,
+    "message":"success",
+    "body":{
+        "private":"58653be4600404e16f158172941dd02ac348e03c515c15feffaabf47e0ee83d3","public":"023f9c1cd5583d5af5eee216bb2e1f67affa66d7819c7a234570815300aa8682fa","address":"monCYoFtTuhNC9GTyrDL9vmHUybyK3NvmV","wif":"cQYXjytDiNx1iUDwL25jzKHW7gHfZYH5XJJrRLjQXssP4RBZuXA5"
+    }
+}
+
+---------- API to get balance --------------
+
+http://127.0.0.1:8008/api/v1/address/balance
+
+POST method
+
+params 
+
+{
+  "coin" : "btc",
+  "coin_type" : "COIN",
+  "environment" : "TEST_NET",
+  "from_address" : "myvyEFaQgMuXPeBiN3utE5vX2k8xonKdTU"
+}
+
+response 
+
+{
+    "HTTP_STATUS_CODE":200,
+    "status":true,
+    "message":"success",
+    "body":
+    {
+        "address":"myvyEFaQgMuXPeBiN3utE5vX2k8xonKdTU",
+        "total_received":0,
+        "total_sent":0,
+        "balance":0,
+        "unconfirmed_balance":0,
+        "final_balance":0,
+        "n_tx":0,
+        "unconfirmed_n_tx":0,
+        "final_n_tx":0
+    }
+}
